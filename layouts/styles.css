@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
 }
@@ -44,7 +43,12 @@ body {
     box-sizing: border-box;
     border-radius: 6px;
     padding: 12px;
-    margin: 10px;
+    margin: 0 20px 12px 20px;
+    cursor:pointer;
+}
+
+.repo-list_tile:hover {
+    box-shadow: 0 2px 6px rgba(182, 182, 182, 0.25);
 }
 
 .tile_repo-name {
@@ -56,12 +60,17 @@ body {
 }
 
 .tile_org-name {
+    text-decoration: none;
     margin-block-start: 4px;
     margin-block-end: 4px;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     color: #7E7E7E;
+}
+
+.tile_org-name:hover {
+    color: #208FBF;
 }
 
 .tile_info {
@@ -90,4 +99,55 @@ body {
 
 .tile_rating-number {
     vertical-align: top;
+}
+
+.search-bar-container {
+    margin: 20px;
+}
+
+.search-bar_input-line {
+    outline: none;
+    width: 295px;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 17px 12px;
+    margin-right: 10px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.search-bar_input-line::placeholder {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E7E;
+}
+
+.search-bar_input-line:disabled {
+    background: #F9F9F9;
+    color: #7E7E7E;
+}
+
+.search-bar_input-line:focus {
+    border: 1px solid #FF5555;
+}
+
+.search-bar_search-button {
+    width: 50px;
+    height: 50px;
+    background: #FF5555;
+    border-radius: 6px;
+    border: none;
+    vertical-align: bottom;
+    cursor:pointer;
+}
+
+.search-bar_search-button:hover {
+    opacity: 0.7;
+}
+
+.search-bar_search-button:disabled {
+    background: #D9D9D9;
 }
