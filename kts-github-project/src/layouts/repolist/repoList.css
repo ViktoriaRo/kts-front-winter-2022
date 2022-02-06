@@ -30,6 +30,7 @@ body {
     height: 80px;
     border-radius: 40px;
     position: relative;
+    flex-shrink: 0;
 }
 
 .avatar-text {
@@ -64,6 +65,9 @@ body {
     line-height: 19px;
     margin-block-start: 0;
     margin-block-end: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .tile_org-name {
@@ -97,6 +101,7 @@ body {
 
 .tile_content {
     margin: 10px 0 10px 12px;
+    overflow: hidden;
 }
 
 .tile_rating {
