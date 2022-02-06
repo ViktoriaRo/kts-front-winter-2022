@@ -1,0 +1,164 @@
+:root {
+    --accent-color: #FF5555;
+    --hint-color: #7E7E7E;
+    --border-color: #D9D9D9;
+    --link-hover-color: #208FBF;
+}
+
+body {
+    margin: 0;
+}
+
+.search-bar-container {
+    grid-area: searchBar;
+}
+
+.repo-list-wrapper {
+    grid-area: tile;
+}
+
+.repo-list-page {
+    display: grid;
+    grid-template-areas:
+    'searchBar'
+    'tile';
+}
+
+.tile_avatar {
+    background-color: var(--accent-color);
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.avatar-text {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    color: #FFF;
+    position: absolute;
+    left: 25px;
+    top: 17px;
+}
+
+.repo-list_tile {
+    display: flex;
+    width: 357px;
+    height: 104px;
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 12px;
+    margin: 0 20px 12px 20px;
+    cursor:pointer;
+}
+
+.repo-list_tile:hover {
+    box-shadow: 0 2px 6px rgba(182, 182, 182, 0.25);
+}
+
+.tile_repo-name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.tile_org-name {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--hint-color);
+}
+
+.tile_org-name:hover {
+    color: var(--link-hover-color);
+}
+
+.tile_info {
+    display: flex;
+}
+
+.tile_info {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--hint-color);
+    margin-top: 4px;
+}
+
+.tile_date {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.tile_content {
+    margin: 10px 0 10px 12px;
+    overflow: hidden;
+}
+
+.tile_rating {
+    margin-right: 20px;
+}
+
+.tile_rating-number {
+    vertical-align: top;
+}
+
+.search-bar-container {
+    margin: 20px;
+}
+
+.search-bar_input-line {
+    outline: none;
+    width: 295px;
+    border: 1px solid var(--border-color);
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 17px 12px;
+    margin-right: 10px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.search-bar_input-line::placeholder {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--hint-color);
+}
+
+.search-bar_input-line:disabled {
+    background: var(--border-color);
+    color: var(--hint-color);
+}
+
+.search-bar_input-line:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.search-bar_search-button {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-color);
+    border-radius: 6px;
+    border: none;
+    vertical-align: bottom;
+    cursor:pointer;
+}
+
+.search-bar_search-button:hover {
+    opacity: 0.7;
+}
+
+.search-bar_search-button:disabled {
+    background: var(--border-color);
+}
